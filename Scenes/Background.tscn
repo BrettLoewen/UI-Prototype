@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://w7taqsvdkb32"]
+
+[ext_resource type="Texture2D" uid="uid://fmdwpree37rl" path="res://Art/Panel Background Big.png" id="1_n6y0q"]
+
+[node name="Background" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_n6y0q")
+region_rect = Rect2(0, 0, 256, 256)
+patch_margin_left = 34
+patch_margin_top = 34
+patch_margin_right = 34
+patch_margin_bottom = 34
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
