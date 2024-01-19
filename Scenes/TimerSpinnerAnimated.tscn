@@ -1,0 +1,129 @@
+[gd_scene load_steps=18 format=3 uid="uid://cutcgkttg3m0u"]
+
+[ext_resource type="Texture2D" uid="uid://b1qrf08v6s86" path="res://Art/Timer Spinner.png" id="1_juf4k"]
+[ext_resource type="Script" path="res://FitNode2DInControl.gd" id="1_nb447"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8hem"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcx8o"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cos6s"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvewe"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utpgl"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjrou"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(80, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avfqa"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(96, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etm53"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(112, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whba0"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(128, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aeqjh"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(144, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcims"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(160, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qvow"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(176, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hex5t"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(192, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8p0l"]
+atlas = ExtResource("1_juf4k")
+region = Rect2(208, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n8ukt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8hem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcx8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cos6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvewe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utpgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjrou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avfqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etm53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whba0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aeqjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcims")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qvow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hex5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8p0l")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Timer Spinner Animated" type="Control" node_paths=PackedStringArray("animatedSprite")]
+layout_mode = 3
+anchor_right = 0.069
+anchor_bottom = 0.185
+offset_right = 0.512001
+offset_bottom = 0.119995
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nb447")
+animatedSprite = NodePath("AnimatedSprite2D")
+animName = "Idle"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(40, 60)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_n8ukt")
+animation = &"Idle"
+frame_progress = 0.622564
