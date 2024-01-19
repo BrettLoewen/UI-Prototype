@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cutcgkttg3m0u"]
 
 [ext_resource type="Texture2D" uid="uid://b1qrf08v6s86" path="res://Art/Timer Spinner.png" id="1_juf4k"]
-[ext_resource type="Script" path="res://FitNode2DInControl.gd" id="1_nb447"]
+[ext_resource type="Script" path="res://Scripts/FitNode2DInControl.gd" id="1_nb447"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8hem"]
 atlas = ExtResource("1_juf4k")

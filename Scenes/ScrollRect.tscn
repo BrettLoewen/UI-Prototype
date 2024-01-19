@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://cssjt0j2jif1p"]
+
+[ext_resource type="Script" path="res://Scripts/MouseDragScroll.gd" id="1_j2vr0"]
+
+[node name="Scroll Rect" type="Control"]
+layout_mode = 3
+anchor_right = 0.25
+anchor_bottom = 0.1
+offset_bottom = 0.199997
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j2vr0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/CenterContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button2" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+modulate = Color(0, 0, 1, 1)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button3" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button4" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button5" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button6" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button7" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button8" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Button9" type="Button" parent="ScrollContainer/CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 1
+
+[connection signal="gui_input" from="ScrollContainer" to="." method="_on_ScrollContainer_gui_input"]

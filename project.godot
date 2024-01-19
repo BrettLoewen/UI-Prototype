@@ -13,7 +13,7 @@ config_version=5
 config/name="UI Prototype"
 run/main_scene="res://Scenes/BackgroundRectDemo.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Art/icon.svg"
 
 [display]
 
