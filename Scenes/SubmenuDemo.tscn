@@ -1,0 +1,205 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbwv127jhwfgi"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_sf00f"]
+
+[node name="SubmenuDemo" type="Control" node_paths=PackedStringArray("submenus", "menu", "firstMenu", "openButton", "closeButton", "backButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sf00f")
+submenus = [NodePath("Menu/Submenu1"), NodePath("Menu/Submenu2"), NodePath("Menu/Submenu3"), NodePath("Menu/Submenu4")]
+menu = NodePath("Menu")
+firstMenu = NodePath("Menu/CenterContainer")
+openButton = NodePath("Open")
+closeButton = NodePath("Menu/Close")
+backButton = NodePath("Menu/Back")
+
+[node name="Open" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = -108.0
+offset_right = 278.0
+offset_bottom = -30.0
+grow_vertical = 0
+text = "Open"
+
+[node name="Menu" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.180392, 0.219608, 0.25098, 1)
+
+[node name="Close" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -164.0
+offset_top = 19.0
+offset_right = -31.0
+offset_bottom = 66.0
+grow_horizontal = 0
+text = "Close"
+
+[node name="Back" type="Button" parent="Menu"]
+layout_mode = 1
+offset_left = 29.0
+offset_top = 20.0
+offset_right = 162.0
+offset_bottom = 67.0
+text = "Back"
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.2
+anchor_right = 0.7
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Menu/CenterContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="OpenSubmenu1" type="Button" parent="Menu/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Dragons"
+
+[node name="OpenSubmenu2" type="Button" parent="Menu/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Habitats"
+
+[node name="OpenSubmenu3" type="Button" parent="Menu/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Buildings"
+
+[node name="OpenSubmenu4" type="Button" parent="Menu/CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "Land"
+
+[node name="Submenu1" type="Control" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Menu/Submenu1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Dragons"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Submenu2" type="Control" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Menu/Submenu2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Habitats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Submenu3" type="Control" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Menu/Submenu3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Buildings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Submenu4" type="Control" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Menu/Submenu4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -40.0
+offset_right = 100.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Land"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Open" to="." method="OpenMenu"]
+[connection signal="pressed" from="Menu/Close" to="." method="Close"]
+[connection signal="pressed" from="Menu/Back" to="." method="Back"]
+[connection signal="pressed" from="Menu/CenterContainer/GridContainer/OpenSubmenu1" to="." method="OpenSubmenu" binds= [0]]
+[connection signal="pressed" from="Menu/CenterContainer/GridContainer/OpenSubmenu2" to="." method="OpenSubmenu" binds= [1]]
+[connection signal="pressed" from="Menu/CenterContainer/GridContainer/OpenSubmenu3" to="." method="OpenSubmenu" binds= [2]]
+[connection signal="pressed" from="Menu/CenterContainer/GridContainer/OpenSubmenu4" to="." method="OpenSubmenu" binds= [3]]
